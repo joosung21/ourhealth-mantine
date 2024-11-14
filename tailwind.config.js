@@ -10,12 +10,12 @@ export default {
   plugins: [
     plugin(function ({ addBase, theme }) {
       addBase({
-        h1: { fontSize: '3rem' },
-        h2: { fontSize: '2.25rem', fontWeight: '700' },
-        h3: { fontSize: '1.875rem' },
-        h4: { fontSize: '1.5rem' },
-        h5: { fontSize: '1.25rem' },
-        h6: { fontSize: '1rem' },
+        h1: { fontSize: '2.5rem', fontWeight: '600', fontFamily: 'Roboto, sans-serif' },
+        h2: { fontSize: '2.0rem', fontWeight: '600', fontFamily: 'Roboto, sans-serif' },
+        h3: { fontSize: '1.75rem', fontWeight: '600', fontFamily: 'Roboto, sans-serif' },
+        h4: { fontSize: '1.5rem', fontWeight: '700', fontFamily: 'Roboto, sans-serif' },
+        h5: { fontSize: '1.25rem', fontWeight: '600', fontFamily: 'Roboto, sans-serif' },
+        h6: { fontSize: '1rem', fontWeight: '700', fontFamily: 'Roboto, sans-serif' },
         ol: { listStyleType: 'decimal' },
         ul: { listStyleType: 'disc' },
         li: { marginLeft: '1.5rem' },

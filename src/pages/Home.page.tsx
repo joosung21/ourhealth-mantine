@@ -1,13 +1,14 @@
-// import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-// import { Welcome } from '../components/Welcome/Welcome';
-import { Test } from '../components/Test/Test';
-
 export function HomePage() {
   return (
     <>
-      {/* <Welcome />
-      <ColorSchemeToggle /> */}
-      <Test />
+      <h2>Todo</h2>
+      <ol>
+        <li>Layout</li>
+        <li>Routing</li>
+        <li>Axios</li>
+        <li>Zustand</li>
+        <li>Signin/Signup Page</li>
+      </ol>
     </>
   );
 }
