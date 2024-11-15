@@ -9,47 +9,47 @@ import { NavLink } from '@mantine/core';
 
 const links = [
   {
-    href: '/todo',
+    href: '../todo',
     label: 'Todo',
     leftSection: <FlagIcon className="w-5" />,
   },
   {
-    href: '/app-spec',
+    href: '../app-spec',
     label: 'App Spec',
     leftSection: <RocketLaunchIcon className="w-5" />,
   },
   {
-    href: '/responsive',
+    href: '../responsive',
     label: 'Responsive',
     leftSection: <DeviceTabletIcon className="w-5" />,
   },
   {
-    href: '/ui',
+    href: '../ui',
     label: 'UI',
     leftSection: <SwatchIcon className="w-5" />,
     Children: [
       {
-        href: '/ui/color',
+        href: '../ui/color',
         label: 'Color',
       },
       {
-        href: '/ui/typography',
+        href: '../ui/typography',
         label: 'Typography',
       },
       {
-        href: '/ui/form',
+        href: '../ui/form',
         label: 'Form',
       },
       {
-        href: '/ui/date-picker',
+        href: '../ui/date-picker',
         label: 'Date Picker',
       },
       {
-        href: '/ui/notification',
+        href: '../ui/notification',
         label: 'Notification',
       },
       {
-        href: '/ui/modal',
+        href: '../ui/modal',
         label: 'Modal',
       },
     ],

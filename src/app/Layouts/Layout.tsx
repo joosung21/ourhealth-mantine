@@ -1,6 +1,6 @@
+import { Outlet } from 'react-router-dom';
 import { AppShell, Burger, Group, Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Router } from '@/app/Router';
 import logo from '@/assets/logo.png';
 import AvatarDropdown from './AvatarDropdown';
 import LavLinks from './NavLinks';
@@ -36,7 +36,7 @@ export default function Layout() {
       </AppShell.Navbar>
 
       <AppShell.Main className="bg-slate-50 max-sm:px-0">
-        <Router />
+        <Outlet />
       </AppShell.Main>
     </AppShell>
   );
