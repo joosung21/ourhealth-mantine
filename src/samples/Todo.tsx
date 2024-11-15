@@ -7,7 +7,6 @@ export default function Todo() {
       <div className="page-description">The list of things to do by priority</div>
       <Paper shadow="xs" radius="md" p="xl">
         <List type="ordered">
-          <List.Item>404Page</List.Item>
           <List.Item>Axios Fetch/Post</List.Item>
           <List.Item>List</List.Item>
           <List.Item>Drawer</List.Item>

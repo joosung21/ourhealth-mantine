@@ -1,3 +1,4 @@
+import './index.css';
 import './global.scss';
 
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';

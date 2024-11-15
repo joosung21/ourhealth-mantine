@@ -1,4 +1,5 @@
 import { Box, Button, Card, Container, Divider, Group, Paper } from '@mantine/core';
+import TAILWIND_COLORS from './constants/tainwind-colors.js';
 
 const mantineColors = [
   'gray',
@@ -16,30 +17,9 @@ const mantineColors = [
   'orange',
 ];
 
-const tailwindColors = [
-  'slate',
-  'gray',
-  'zinc',
-  'neutral',
-  'stone',
-  'red',
-  'orange',
-  'amber',
-  'yellow',
-  'lime',
-  'green',
-  'emerald',
-  'teal',
-  'cyan',
-  'sky',
-  'blue',
-  'indigo',
-  'violet',
-  'purple',
-  'fuchsia',
-  'pink',
-  'rose',
-];
+function isDark(color: string) {
+  return Number(color.split('-').pop()) >= 500;
+}
 
 export default function Color() {
   return (
@@ -71,71 +51,18 @@ export default function Color() {
         <Divider my="lg" />
 
         <h2>Tailwind Background Color Scheme</h2>
-        {tailwindColors.map((color) => (
-          <Group key={color} style={{ marginBottom: 10 }} gap={0} className="text-xs">
-            <Paper p="sm" style={{ width: 100 }} className={`bg-${color}-50`} radius={0}>
-              {color}-50
-            </Paper>
-            <Paper p="sm" style={{ width: 100 }} className={`bg-${color}-100`} radius={0}>
-              {color}-100
-            </Paper>
-            <Paper p="sm" style={{ width: 100 }} className={`bg-${color}-200`} radius={0}>
-              {color}-200
-            </Paper>
-            <Paper p="sm" style={{ width: 100 }} className={`bg-${color}-300`} radius={0}>
-              {color}-300
-            </Paper>
-            <Paper p="sm" style={{ width: 100 }} className={`bg-${color}-400`} radius={0}>
-              {color}-400
-            </Paper>
-            <Paper
-              p="sm"
-              style={{ width: 100 }}
-              className={`bg-${color}-500 text-white`}
-              radius={0}
-            >
-              {color}-500
-            </Paper>
-            <Paper
-              p="sm"
-              style={{ width: 100 }}
-              className={`bg-${color}-600 text-white`}
-              radius={0}
-            >
-              {color}-600
-            </Paper>
-            <Paper
-              p="sm"
-              style={{ width: 100 }}
-              className={`bg-${color}-700 text-white`}
-              radius={0}
-            >
-              {color}-700
-            </Paper>
-            <Paper
-              p="sm"
-              style={{ width: 100 }}
-              className={`bg-${color}-800 text-white`}
-              radius={0}
-            >
-              {color}-800
-            </Paper>
-            <Paper
-              p="sm"
-              style={{ width: 100 }}
-              className={`bg-${color}-900 text-white`}
-              radius={0}
-            >
-              {color}-900
-            </Paper>
-            <Paper
-              p="sm"
-              style={{ width: 100 }}
-              className={`bg-${color}-950 text-white`}
-              radius={0}
-            >
-              {color}-950
-            </Paper>
+        {TAILWIND_COLORS.map((arr: string[]) => (
+          <Group key={arr[0]} style={{ marginBottom: 10 }} gap={0} className="text-xs">
+            {arr.map((color: string) => (
+              <Box
+                key={color}
+                style={{ width: 100 }}
+                className={`${color} ${isDark(color) ? 'text-white' : 'text-gray-800'} font-[600] h-12 flex items-center justify-center`}
+                p="sm"
+              >
+                {color}
+              </Box>
+            ))}
           </Group>
         ))}
       </Paper>
