@@ -5,7 +5,8 @@ import { notifications } from '@mantine/notifications';
 export default function Notification() {
   return (
     <Container>
-      <h1 className="mb-6">Notification</h1>
+      <h1>Notification</h1>
+      <div className="page-description">Notification component</div>
       <Paper shadow="xs" radius="md" p="xl">
         <Group>
           <Button

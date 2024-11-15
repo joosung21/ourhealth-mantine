@@ -3,6 +3,7 @@ import AppSpec from '@/samples/AppSpec';
 import Color from '@/samples/Color';
 import DatePicker from '@/samples/DatePicker';
 import Form from '@/samples/Form';
+import Modal from '@/samples/Modal';
 import Notification from '@/samples/Notification';
 import Responsive from '@/samples/Responsive';
 import Todo from '@/samples/Todo';
@@ -13,6 +14,10 @@ const routes = [
   {
     path: '/',
     loader: () => redirect('/todo'),
+  },
+  {
+    path: '/NotFound',
+    element: <NotFound />,
   },
   {
     path: '/todo',
@@ -49,11 +54,15 @@ const routes = [
         path: 'notification',
         element: <Notification />,
       },
+      {
+        path: 'modal',
+        element: <Modal />,
+      },
     ],
   },
   {
     path: '*',
-    element: <NotFound />,
+    loader: () => redirect('/NotFound'),
   },
 ];
 

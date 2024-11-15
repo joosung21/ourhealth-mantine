@@ -1,4 +1,4 @@
-import { Container, Paper } from '@mantine/core';
+import { Container, List, Paper } from '@mantine/core';
 
 export default function Todo() {
   return (
@@ -6,18 +6,17 @@ export default function Todo() {
       <h1>Todo</h1>
       <div className="page-description">The list of things to do by priority</div>
       <Paper shadow="xs" radius="md" p="xl">
-        <ol>
-          <li>Rosponsive</li>
-          <li>Mantine UI 참조</li>
-          <li>Confirmation Dialog</li>
-          <li>Modal Popup</li>
-          <li>Table</li>
-          <li>Alert</li>
-          <li>Axios Fetch/Post</li>
-          <li>Zustant Store</li>
-          <li>Signin/Signup Page</li>
-          <li>i18n Multi Language</li>
-        </ol>
+        <List type="ordered">
+          <List.Item>404Page</List.Item>
+          <List.Item>Axios Fetch/Post</List.Item>
+          <List.Item>List</List.Item>
+          <List.Item>Drawer</List.Item>
+          <List.Item>Alert</List.Item>
+          <List.Item>Zustant Store</List.Item>
+          <List.Item>Signin/Signup Page</List.Item>
+          <List.Item>i18n Multi Language</List.Item>
+          {/* <List.Item>Mantine UI 참조</List.Item> */}
+        </List>
       </Paper>
     </Container>
   );

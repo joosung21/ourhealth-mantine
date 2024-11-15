@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { PaperClipIcon } from '@heroicons/react/24/outline';
 import {
   Autocomplete,
@@ -48,6 +48,8 @@ const INIT_VALUES = {
   age: 0,
   radio: 'Radio1',
   chips: [],
+  message: '',
+  country: '',
 };
 
 export default function Form() {
@@ -62,19 +64,11 @@ export default function Form() {
     },
   });
 
-  // form.watch('termsOfService', ({ value }) => {
-  //   console.log({ value });
-  // });
-
-  // toggle off the loading overlay after 1 seconds
-  useEffect(() => {
-    if (visible) {
-      setTimeout(() => {
-        toggle();
-        form.reset();
-      }, 1000);
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
     }
-  }, [visible]);
+  };
 
   return (
     <Container>
@@ -82,7 +76,10 @@ export default function Form() {
       <Paper shadow="xs" radius="md" p="xl" className="relative">
         <LoadingOverlay visible={visible} />
 
-        <form onSubmit={form.onSubmit((values) => console.log(values))}>
+        <form
+          onSubmit={form.onSubmit((values) => alert(JSON.stringify(values, null, 2)))}
+          onKeyDown={handleKeyDown}
+        >
           <Grid gutter="lg">
             <Grid.Col span={{ base: 12, md: 6 }}>
               <Fieldset legend="Input">
@@ -146,9 +143,9 @@ export default function Form() {
                     <div className="label">Select chips</div>
                     <Chip.Group multiple {...form.getInputProps('chips')}>
                       <Group>
-                        <Chip value="1">multiple</Chip>
-                        <Chip value="2">Chips</Chip>
-                        <Chip value="3">Selectable</Chip>
+                        <Chip value="Apple">Apple</Chip>
+                        <Chip value="Banana">Banana</Chip>
+                        <Chip value="Orange">Orange</Chip>
                       </Group>
                     </Chip.Group>
                   </div>
@@ -191,7 +188,7 @@ export default function Form() {
                     clearable
                   />
                   <Autocomplete
-                    label="Country"
+                    label="Autocomplete"
                     placeholder="Please select"
                     description="This is Autocomplete"
                     data={selectData}
@@ -227,7 +224,7 @@ export default function Form() {
           </Grid>
 
           <Group justify="flex-end" mt="md">
-            <Button type="submit" onClick={toggle}>
+            <Button type="submit" mt="lg">
               Submit
             </Button>
           </Group>
