@@ -10,11 +10,12 @@ export default function Layout() {
 
   return (
     <AppShell
+      style={{ minWidth: '300px' }}
       header={{ height: 60 }}
       navbar={{ width: 260, breakpoint: 'sm', collapsed: { mobile: !opened } }}
       padding="md"
     >
-      <AppShell.Header>
+      <AppShell.Header style={{ minWidth: '300px' }}>
         <Group h="100%" px="md" justify="space-between">
           <Group>
             <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />

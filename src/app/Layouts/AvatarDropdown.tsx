@@ -32,7 +32,7 @@ export default function AvatarDropdown() {
 
         <Menu.Divider />
 
-        <Menu.Item leftSection={<PowerIcon className="w-4" />}>Logout</Menu.Item>
+        <Menu.Item leftSection={<PowerIcon className="w-4" />}>Sing out</Menu.Item>
       </Menu.Dropdown>
     </Menu>
   );

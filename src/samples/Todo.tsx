@@ -3,12 +3,12 @@ import { Container, Paper } from '@mantine/core';
 export default function Todo() {
   return (
     <Container>
-      <h1 className="mb-6">Todo</h1>
+      <h1>Todo</h1>
+      <div className="page-description">The list of things to do by priority</div>
       <Paper shadow="xs" radius="md" p="xl">
         <ol>
-          <li>App spec</li>
+          <li>Rosponsive</li>
           <li>Mantine UI 참조</li>
-          <li>Colors</li>
           <li>Confirmation Dialog</li>
           <li>Modal Popup</li>
           <li>Table</li>

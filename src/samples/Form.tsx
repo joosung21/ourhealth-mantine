@@ -205,12 +205,13 @@ export default function Form() {
                 <Stack gap="md">
                   <FileInput
                     accept="image/png,image/jpeg,application/pdf"
-                    label="Upload files"
+                    label="Input style Upload files"
                     placeholder="Upload files"
                     leftSection={<PaperClipIcon className="w-5" />}
                     clearable
                   />
                   <div>
+                    <div className="label">Button style Upload files</div>
                     <FileButton onChange={setFile} accept="image/png,image/jpeg">
                       {(props) => <Button {...props}>Upload image</Button>}
                     </FileButton>

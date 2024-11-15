@@ -36,16 +36,26 @@ const items = [
     ],
   },
   {
+    name: 'Tailwind CSS',
+    feature: 'CSS Framework',
+    description: 'A utility-first CSS framework for rapidly building custom designs.',
+    sources: [
+      {
+        name: 'Tailwind CSS Docs',
+        url: 'https://tailwindcss.com/docs',
+      },
+    ],
+  },
+  {
     name: 'Prettier',
     feature: 'Code Formatter',
     description: 'Prettier is an opinionated code formatter.',
-    sourceElement: () => {
-      return (
-        <Anchor size="sm" onClick={() => window.open('https://prettier.io/docs/en/', '_blank')}>
-          Prettier Docs
-        </Anchor>
-      );
-    },
+    sources: [
+      {
+        name: 'Prettier Docs',
+        url: 'https://prettier.io/docs/en/',
+      },
+    ],
   },
   {
     name: 'Vite',
@@ -126,27 +136,28 @@ const items = [
   },
 ];
 
-export default function AppSpec() {
-  const rows = items.map((item) => (
-    <Table.Tr key={item.name}>
-      <Table.Td className="font-semibold">{item.name}</Table.Td>
-      <Table.Td>{item.feature}</Table.Td>
-      <Table.Td>{item.description}</Table.Td>
-      <Table.Td className="whitespace-nowrap">
-        <Stack gap={2} align="flex-start">
-          {item.sources?.map((source, index) => (
-            <Anchor key={index} size="sm" onClick={() => window.open(source.url, '_blank')}>
-              {source.name}
-            </Anchor>
-          ))}
-        </Stack>
-      </Table.Td>
-    </Table.Tr>
-  ));
+const rows = items.map((item) => (
+  <Table.Tr key={item.name}>
+    <Table.Td className="font-semibold">{item.name}</Table.Td>
+    <Table.Td>{item.feature}</Table.Td>
+    <Table.Td>{item.description}</Table.Td>
+    <Table.Td className="whitespace-nowrap">
+      <Stack gap={2} align="flex-start">
+        {item.sources?.map((source, index) => (
+          <Anchor key={index} size="sm" onClick={() => window.open(source.url, '_blank')}>
+            {source.name}
+          </Anchor>
+        ))}
+      </Stack>
+    </Table.Td>
+  </Table.Tr>
+));
 
+export default function AppSpec() {
   return (
     <Container>
-      <h1 className="mb-6">App Spec</h1>
+      <h1>App Spec</h1>
+      <div className="page-description">Application Specification Details</div>
       <Paper shadow="xs" radius="md" p="xl">
         <Table.ScrollContainer minWidth={500}>
           <Table>

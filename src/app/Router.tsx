@@ -1,8 +1,10 @@
 import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom';
 import AppSpec from '@/samples/AppSpec';
+import Color from '@/samples/Color';
 import DatePicker from '@/samples/DatePicker';
 import Form from '@/samples/Form';
 import Notification from '@/samples/Notification';
+import Responsive from '@/samples/Responsive';
 import Todo from '@/samples/Todo';
 import Typography from '@/samples/Typography';
 import NotFound from './NotFound';
@@ -21,8 +23,16 @@ const routes = [
     element: <AppSpec />,
   },
   {
+    path: '/responsive',
+    element: <Responsive />,
+  },
+  {
     path: '/ui',
     children: [
+      {
+        path: 'Color',
+        element: <Color />,
+      },
       {
         path: 'typography',
         element: <Typography />,

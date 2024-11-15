@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
-import { FlagIcon, FolderIcon } from '@heroicons/react/24/outline';
+import {
+  DeviceTabletIcon,
+  FlagIcon,
+  RocketLaunchIcon,
+  SwatchIcon,
+} from '@heroicons/react/24/outline';
 import { NavLink } from '@mantine/core';
 
 const links = [
@@ -11,13 +16,22 @@ const links = [
   {
     href: '/app-spec',
     label: 'App Spec',
-    leftSection: <FlagIcon className="w-5" />,
+    leftSection: <RocketLaunchIcon className="w-5" />,
+  },
+  {
+    href: '/responsive',
+    label: 'Responsive',
+    leftSection: <DeviceTabletIcon className="w-5" />,
   },
   {
     href: '/ui',
     label: 'UI',
-    leftSection: <FolderIcon className="w-5" />,
+    leftSection: <SwatchIcon className="w-5" />,
     Children: [
+      {
+        href: '/ui/color',
+        label: 'Color',
+      },
       {
         href: '/ui/typography',
         label: 'Typography',
