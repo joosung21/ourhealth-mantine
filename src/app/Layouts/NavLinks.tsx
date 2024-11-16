@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import {
+  CircleStackIcon,
   DeviceTabletIcon,
   FlagIcon,
   RocketLaunchIcon,
@@ -22,6 +23,11 @@ const links = [
     href: '/responsive',
     label: 'Responsive',
     leftSection: <DeviceTabletIcon className="w-5" />,
+  },
+  {
+    href: '/fetch-data',
+    label: 'Fetch Data',
+    leftSection: <CircleStackIcon className="w-5" />,
   },
   {
     href: '/ui',

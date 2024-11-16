@@ -5,6 +5,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
 import { ModalsProvider } from '@mantine/modals';
 import { Notifications } from '@mantine/notifications';
+import FetchData from '@/samples/FetchData';
 import AppSpec from '../samples/AppSpec';
 import Color from '../samples/Color';
 import DatePicker from '../samples/DatePicker';
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="/todo" element={<Todo />} />
             <Route path="/app-spec" element={<AppSpec />} />
             <Route path="/responsive" element={<Responsive />} />
+            <Route path="/fetch-data" element={<FetchData />} />
             <Route path="/ui">
               <Route path="/ui/color" element={<Color />} />
               <Route path="/ui/typography" element={<Typography />} />
