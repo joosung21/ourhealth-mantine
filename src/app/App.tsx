@@ -21,8 +21,8 @@ import NotFound from './NotFound';
 export default function App() {
   return (
     <MantineProvider theme={theme} defaultColorScheme="light">
-      <Notifications />
       <ModalsProvider></ModalsProvider>
+      <Notifications />
       <BrowserRouter
         future={{
           v7_startTransition: true,

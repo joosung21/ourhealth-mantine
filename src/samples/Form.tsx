@@ -64,22 +64,13 @@ export default function Form() {
     },
   });
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-    }
-  };
-
   return (
     <Container>
       <h1 className="mb-6">Form</h1>
       <Paper shadow="xs" radius="md" p="xl" className="relative">
         <LoadingOverlay visible={visible} />
 
-        <form
-          onSubmit={form.onSubmit((values) => alert(JSON.stringify(values, null, 2)))}
-          onKeyDown={handleKeyDown}
-        >
+        <form onSubmit={form.onSubmit((values) => alert(JSON.stringify(values, null, 2)))}>
           <Grid gutter="lg">
             <Grid.Col span={{ base: 12, md: 6 }}>
               <Fieldset legend="Input">
