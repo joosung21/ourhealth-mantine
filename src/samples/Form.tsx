@@ -171,7 +171,7 @@ export default function Form() {
                   />
                   <MultiSelect
                     label="Multiple Select"
-                    placeholder="Please MultiSelect"
+                    placeholder="Please select"
                     description="This is MultiSelect"
                     data={selectData}
                     key={form.key('Countries')}

@@ -138,8 +138,8 @@ const items = [
 
 const rows = items.map((item) => (
   <Table.Tr key={item.name}>
-    <Table.Td className="font-semibold">{item.name}</Table.Td>
-    <Table.Td>{item.feature}</Table.Td>
+    <Table.Td className="font-semibold whitespace-nowrap">{item.name}</Table.Td>
+    <Table.Td className="whitespace-nowrap">{item.feature}</Table.Td>
     <Table.Td>{item.description}</Table.Td>
     <Table.Td className="whitespace-nowrap">
       <Stack gap={2} align="flex-start">

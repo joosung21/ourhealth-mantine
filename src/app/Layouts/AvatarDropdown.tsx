@@ -1,28 +1,18 @@
-import { useState } from 'react';
 import { Cog8ToothIcon, PowerIcon } from '@heroicons/react/24/outline';
 import { Avatar, Combobox, Group, Menu, useCombobox } from '@mantine/core';
-
-const groceries = ['🍎 Apples', '🍌 Bananas', '🥦 Broccoli', '🥕 Carrots', '🍫 Chocolate'];
 
 export default function AvatarDropdown() {
   const name = 'Joosung Ahn';
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
   });
-  const [value, setValue] = useState<string | null>(null);
-
-  const options = groceries.map((item) => (
-    <Combobox.Option value={item} key={item}>
-      {item}
-    </Combobox.Option>
-  ));
 
   return (
     <Menu shadow="md" width={180}>
       <Menu.Target>
-        <Group className="select-none cursor-pointer text-gray-600 font-semibold text-sm">
+        <Group className="select-none cursor-pointer text-gray-600 font-semibold text-sm" gap="sm">
+          <Avatar name={name} color="initials" allowedInitialsColors={['blue', 'red']} size={32} />
           <div className="hidden sm:block">{name}</div>
-          <Avatar name={name} color="initials" allowedInitialsColors={['blue', 'red']} />
         </Group>
       </Menu.Target>
 
@@ -32,7 +22,14 @@ export default function AvatarDropdown() {
 
         <Menu.Divider />
 
-        <Menu.Item leftSection={<PowerIcon className="w-4" />}>Sing out</Menu.Item>
+        <Menu.Item
+          leftSection={<PowerIcon className="w-4" id="logout" />}
+          onClick={() => {
+            window.location.href = '/login';
+          }}
+        >
+          Log out
+        </Menu.Item>
       </Menu.Dropdown>
     </Menu>
   );

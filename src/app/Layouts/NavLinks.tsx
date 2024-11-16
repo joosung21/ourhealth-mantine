@@ -58,6 +58,10 @@ const links = [
         href: '/ui/modal',
         label: 'Modal',
       },
+      {
+        href: '/ui/alert',
+        label: 'Alert',
+      },
     ],
   },
 ];

@@ -8,7 +8,6 @@ export default function FetchData() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // API 호출
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
       .then((response) => {

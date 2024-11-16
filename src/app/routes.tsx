@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
+import Alert from '@/samples/Alert';
 import FetchData from '@/samples/FetchData';
 import AppSpec from '../samples/AppSpec';
 import Color from '../samples/Color';
@@ -11,16 +12,18 @@ import Todo from '../samples/Todo';
 import Typography from '../samples/Typography';
 import Layout from './Layouts/Layout';
 import NotFound from './NotFound';
+import Login from './Auth/Login';
 
 export default function AppRoutes() {
   return (
     <Routes>
       {/* Not Found Route */}
       <Route path="*" element={<NotFound />} />
+      <Route path="/login" element={<Login />} />
 
       {/* Layout Wrapper */}
       <Route element={<Layout />}>
-        {/* Redirect to /todo */}
+        {/* Redirect */}
         <Route path="/" element={<Navigate to="/todo" replace />} />
 
         {/* Main Routes */}
@@ -37,6 +40,7 @@ export default function AppRoutes() {
           <Route path="/ui/date-picker" element={<DatePicker />} />
           <Route path="/ui/notification" element={<Notification />} />
           <Route path="/ui/modal" element={<Modal />} />
+          <Route path="/ui/alert" element={<Alert />} />
         </Route>
       </Route>
     </Routes>

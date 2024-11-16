@@ -4,6 +4,7 @@ import { useDisclosure } from '@mantine/hooks';
 import logo from '@/assets/logo.png';
 import AvatarDropdown from './AvatarDropdown';
 import LavLinks from './NavLinks';
+import ScrollToTop from './ScrollToTop';
 
 export default function Layout() {
   const [opened, { toggle }] = useDisclosure();
@@ -37,6 +38,7 @@ export default function Layout() {
 
       <AppShell.Main className="bg-slate-50 max-sm:px-0">
         <Outlet />
+        <ScrollToTop />
       </AppShell.Main>
     </AppShell>
   );
