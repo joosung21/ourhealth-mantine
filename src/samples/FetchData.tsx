@@ -15,7 +15,7 @@ export default function FetchData() {
         setTimeout(() => {
           setData(response.data);
           setLoading(false);
-        }, 1000);
+        }, 600);
       })
       .catch((error) => {
         setError(error.message);
