@@ -146,7 +146,6 @@ export default function Form() {
                   <div>
                     <div className="label">Select Percentage</div>
                     <Slider
-                      color="blue"
                       mb="lg"
                       step={10}
                       marks={[

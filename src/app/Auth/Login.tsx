@@ -29,7 +29,7 @@ export default function Login() {
         </Anchor>
         <Checkbox label="Keep me logged in" mt="md" size="md" />
 
-        <Button fullWidth mt="xl" size="md" onClick={() => (window.location.href = '/')}>
+        <Button fullWidth mt="xl" size="md" onClick={() => (window.location.href = '/todo')}>
           Login
         </Button>
 

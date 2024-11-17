@@ -101,7 +101,7 @@ export default function Register() {
           <PasswordInput withAsterisk label="Confirm password" placeholder="Confirm password" />
 
           <Checkbox label="I agree to the terms and conditions" required />
-          <Button fullWidth type="submit" onClick={() => (window.location.href = '/')}>
+          <Button fullWidth type="submit" onClick={() => (window.location.href = '/todo')}>
             Register
           </Button>
           <Text ta="center">

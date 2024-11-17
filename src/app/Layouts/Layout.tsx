@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { AppShell, Burger, Group, Image, Text } from '@mantine/core';
+import { AppShell, Burger, Group, Image, Text, useMantineTheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import logo from '@/assets/logo.png';
 import { useCounterStore } from '@/stores/useCounterStore';
@@ -10,6 +10,7 @@ import ScrollToTop from './ScrollToTop';
 export default function Layout() {
   const count = useCounterStore((state) => state.count);
   const [opened, { toggle }] = useDisclosure();
+  const theme = useMantineTheme();
 
   return (
     <AppShell
@@ -25,7 +26,7 @@ export default function Layout() {
             <Image
               src={logo}
               alt="OurHealth logo"
-              h={36}
+              w={200}
               onClick={() => (window.location.href = '/')}
               className="cursor-pointer"
             />

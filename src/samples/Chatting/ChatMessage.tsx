@@ -1,5 +1,6 @@
 import React from 'react';
 import { Avatar, Text } from '@mantine/core';
+import { theme } from '@/theme';
 
 interface ChatMessageProps {
   message: string;
@@ -20,7 +21,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       <div>
         <div
           className={`max-w-xs md:max-w-md px-4 py-2 rounded-lg ${
-            isDoctor ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
+            isDoctor ? 'bg-[#389B9B] text-white' : 'bg-gray-200 text-black'
           }`}
         >
           <Text>{message}</Text>

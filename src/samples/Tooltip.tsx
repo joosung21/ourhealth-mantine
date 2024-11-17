@@ -11,12 +11,14 @@ import {
   Text,
   TextInput,
   Tooltip,
+  useMantineTheme,
 } from '@mantine/core';
 import { useClickOutside } from '@mantine/hooks';
 
 export default function Tooltips() {
   const [popoverOpened, setPopoverOpened] = useState(false);
   const popoverRef = useClickOutside(() => setPopoverOpened(false));
+  const theme = useMantineTheme();
 
   return (
     <Container>
@@ -35,7 +37,12 @@ export default function Tooltips() {
           <div>
             <div className="label">Tooltip on icon</div>
             <Tooltip label="This is tooltip. Describe what this icon does. " position="top">
-              <QuestionMarkCircleIcon className="w-6 text-blue-500" />
+              <QuestionMarkCircleIcon
+                className="w-6"
+                style={{
+                  color: theme.colors.darkTeal[5],
+                }}
+              />
             </Tooltip>
           </div>
           <div>

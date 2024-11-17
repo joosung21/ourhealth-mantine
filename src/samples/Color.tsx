@@ -2,6 +2,7 @@ import { Box, Button, Card, Container, Divider, Group, Paper } from '@mantine/co
 import { TAILWIND_COLORS } from './mocks/tainwindColors.js';
 
 const mantineColors = [
+  'darkTeal',
   'gray',
   'red',
   'pink',

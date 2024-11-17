@@ -63,7 +63,7 @@ export default function Cards() {
             Canada, and a part of the University Health Network.
           </Text>
 
-          <Button color="blue" fullWidth mt="md">
+          <Button fullWidth mt="md">
             Book Appointment
           </Button>
         </Card>

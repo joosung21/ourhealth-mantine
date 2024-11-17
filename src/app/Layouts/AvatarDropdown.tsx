@@ -11,7 +11,7 @@ export default function AvatarDropdown() {
     <Menu shadow="md" width={180}>
       <Menu.Target>
         <Group className="select-none cursor-pointer text-gray-600 font-semibold text-sm" gap="sm">
-          <Avatar name={name} color="initials" allowedInitialsColors={['blue', 'red']} size={32} />
+          <Avatar name={name} color="initials" allowedInitialsColors={['darkTeal']} size={32} />
           <div className="hidden sm:block">{name}</div>
         </Group>
       </Menu.Target>

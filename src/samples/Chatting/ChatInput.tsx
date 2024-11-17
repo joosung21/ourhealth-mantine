@@ -78,7 +78,7 @@ export default function ChatInput({ onInterpretEnd }: ChatInputProps) {
               }
             }}
           />
-          <ActionIcon onClick={handleSend} size="lg" variant="filled" color="blue">
+          <ActionIcon onClick={handleSend} size="lg" variant="filled">
             <PaperAirplaneIcon className="w-5 transform" />
           </ActionIcon>
         </div>
@@ -90,7 +90,6 @@ export default function ChatInput({ onInterpretEnd }: ChatInputProps) {
             onClick={() => setVoiceModalOpen(true)}
             variant="filled"
             radius={999}
-            color="blue"
             w={68}
             h={68}
           >
@@ -134,7 +133,6 @@ export default function ChatInput({ onInterpretEnd }: ChatInputProps) {
               }, 3000);
             }}
             variant="filled"
-            color="blue"
             className="rounded-full"
           >
             전송하기
