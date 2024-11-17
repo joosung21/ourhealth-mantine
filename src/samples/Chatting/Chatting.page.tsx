@@ -66,9 +66,13 @@ export default function Chatting() {
   const [messages, setMessages] = useState<Message[]>(INIT_MESSAGES);
 
   return (
-    <Container className="max-sm:p-0">
+    <Container className="max-sm:p-0 max-sm:-mt-4">
       <h1 className="max-sm:hidden">Chatting UI</h1>
-      <Paper shadow="xs" radius="md" className="p-4 md:p-10">
+      <Paper
+        shadow="xs"
+        radius="md"
+        className="p-4 md:p-10 max-sm:h-[calc(100dvh-60px)] max-sm:-mb-[100px]"
+      >
         <Text size="sm" className="mb-4">
           Dr. Jacob Warnhalter
         </Text>

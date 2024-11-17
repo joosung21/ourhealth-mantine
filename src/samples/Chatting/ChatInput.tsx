@@ -100,9 +100,11 @@ export default function ChatInput({ onInterpretEnd }: ChatInputProps) {
       )}
 
       {isInterpreting && (
-        <Stack>
-          <SoundBarAnimation />
-          <Text ta="center" fw={600} c="gray">
+        <Stack gap={0} mb={16}>
+          <div className="scale-50">
+            <SoundBarAnimation />
+          </div>
+          <Text ta="center" fw={600} c="gray" mb={20} fs="sm">
             통역사가 통역 중 입니다.
           </Text>
         </Stack>
@@ -140,14 +142,15 @@ export default function ChatInput({ onInterpretEnd }: ChatInputProps) {
         </Stack>
       </Modal>
 
-      <Button
-        onClick={() => setChattingMode(chattingMode === 'input' ? 'voice' : 'input')}
-        variant="white"
-        className="mt-4"
-        disabled={isInterpreting}
-      >
-        {chattingMode === 'input' ? '음성 입력' : '텍스트 입력'}
-      </Button>
+      {!isInterpreting && (
+        <Button
+          onClick={() => setChattingMode(chattingMode === 'input' ? 'voice' : 'input')}
+          variant="white"
+          className="mt-4"
+        >
+          {chattingMode === 'input' ? '음성 입력' : '텍스트 입력'}
+        </Button>
+      )}
     </>
   );
 }

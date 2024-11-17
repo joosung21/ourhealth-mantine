@@ -27,7 +27,7 @@ export default function ChatWindow({ messages }: ChatWindowProps) {
 
   return (
     <ScrollArea
-      className="p-4 h-[calc(100dvh-300px)] md:h-[calc(100dvh-400px)]"
+      className="p-4 h-[calc(100dvh-260px)] md:h-[calc(100dvh-420px)]"
       viewportRef={viewport}
     >
       {messages.map((msg, index) => (
