@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ArrowDownTrayIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { s } from 'vite/dist/node/types.d-aGj9QkWt';
 import {
   Anchor,
   Avatar,
@@ -15,16 +14,17 @@ import {
   Paper,
   Progress,
   rem,
-  ScrollArea,
   Table,
   Text,
   TextInput,
 } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
+import { notifications } from '@mantine/notifications';
 import { LIST, LIST2 } from './mocks/LIST';
 
 export default function List() {
   const { width } = useViewportSize();
+  const [list2, setList2] = useState(LIST2);
 
   // List1
   const rows = LIST.map((row: any) => {
@@ -72,14 +72,13 @@ export default function List() {
     );
   const toggleAll = () =>
     setSelection((current) =>
-      current.length === LIST2.length ? [] : LIST2.map((item: any) => item.id)
+      current.length === list2.length ? [] : list2.map((item: any) => item.id)
     );
 
-  const rows2 = LIST2.map((item: any) => {
+  const rows2 = list2.map((item: any) => {
     const selected = selection.includes(item.id);
     return (
-      // <Table.Tr key={item.id} className={cx({ [classes.rowSelected]: selected })}>
-      <Table.Tr key={item.id}>
+      <Table.Tr key={item.id} className={selected ? 'bg-blue-50' : ''}>
         <Table.Td>
           <Checkbox checked={selection.includes(item.id)} onChange={() => toggleRow(item.id)} />
         </Table.Td>
@@ -96,6 +95,15 @@ export default function List() {
       </Table.Tr>
     );
   });
+
+  function deleteSelected() {
+    setList2((current: any) => current.filter((item: any) => !selection.includes(item.id)));
+    notifications.show({
+      title: 'Deleted',
+      message: `${selection.length} users were deleted`,
+    });
+    setSelection([]);
+  }
 
   return (
     <Container size="lg">
@@ -149,9 +157,17 @@ export default function List() {
 
       <Paper shadow="xs" radius="md" p="xl" mt="xl">
         <h2>Selectable list</h2>
-        <Button size="xs" disabled={!selection.length}>
-          Delete {selection.length} selected
-        </Button>
+        <Group mt="sm" mb="lg" gap="xs">
+          <Button size="xs" disabled={!selection.length} onClick={deleteSelected}>
+            Delete {selection.length} selected
+          </Button>
+          {/* reset */}
+          {selection.length === 0 && LIST2.length !== list2.length && (
+            <Button size="xs" onClick={() => setList2(LIST2)}>
+              Reset
+            </Button>
+          )}
+        </Group>
         <Table.ScrollContainer minWidth={800}>
           <Table miw={800} verticalSpacing="sm">
             <Table.Thead>
@@ -168,7 +184,18 @@ export default function List() {
                 <Table.Th>Job</Table.Th>
               </Table.Tr>
             </Table.Thead>
-            <Table.Tbody>{rows2}</Table.Tbody>
+            <Table.Tbody>
+              {rows2}
+              {list2.length === 0 && (
+                <Table.Tr>
+                  <Table.Td colSpan={4}>
+                    <Text ta="center" size="sm">
+                      No users found
+                    </Text>
+                  </Table.Td>
+                </Table.Tr>
+              )}
+            </Table.Tbody>
           </Table>
         </Table.ScrollContainer>
       </Paper>

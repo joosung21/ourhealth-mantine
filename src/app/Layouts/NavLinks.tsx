@@ -4,6 +4,7 @@ import {
   CubeIcon,
   DeviceTabletIcon,
   FlagIcon,
+  LanguageIcon,
   RocketLaunchIcon,
   SwatchIcon,
 } from '@heroicons/react/24/outline';
@@ -34,6 +35,11 @@ const links = [
     href: '/state-control',
     label: 'State Control',
     leftSection: <CubeIcon className="w-5" />,
+  },
+  {
+    href: '/multi-language',
+    label: 'Multi-Language',
+    leftSection: <LanguageIcon className="w-5" />,
   },
   {
     href: '/ui',

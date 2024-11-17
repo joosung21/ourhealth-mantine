@@ -3,6 +3,7 @@ import Alert from '@/samples/Alert';
 import Drawers from '@/samples/Drawer';
 import FetchData from '@/samples/FetchData';
 import List from '@/samples/List';
+import MultiLanguage from '@/samples/MultiLanguage';
 import StateControl from '@/samples/StateControl';
 import AppSpec from '../samples/AppSpec';
 import Color from '../samples/Color';
@@ -37,6 +38,7 @@ export default function AppRoutes() {
         <Route path="/responsive" element={<Responsive />} />
         <Route path="/fetch-data" element={<FetchData />} />
         <Route path="/state-control" element={<StateControl />} />
+        <Route path="/multi-language" element={<MultiLanguage />} />
 
         {/* UI Sub-Routes */}
         <Route path="/ui">
