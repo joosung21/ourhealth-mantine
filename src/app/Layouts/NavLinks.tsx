@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import {
+  ChatBubbleLeftEllipsisIcon,
   CircleStackIcon,
   CubeIcon,
   DeviceTabletIcon,
@@ -40,6 +41,11 @@ const links = [
     href: '/multi-language',
     label: 'Multi-Language',
     leftSection: <LanguageIcon className="w-5" />,
+  },
+  {
+    href: '/chatting',
+    label: 'Chatting UI',
+    leftSection: <ChatBubbleLeftEllipsisIcon className="w-5" />,
   },
   {
     href: '/ui',

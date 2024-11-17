@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Accordion from '@/samples/Accordion';
 import Alert from '@/samples/Alert';
 import Card from '@/samples/Card';
+import Chatting from '@/samples/Chatting/Chatting.page';
 import DrageAndDrop from '@/samples/DrageAndDrop';
 import Drawers from '@/samples/Drawer';
 import FetchData from '@/samples/FetchData';
@@ -45,6 +46,7 @@ export default function AppRoutes() {
         <Route path="/fetch-data" element={<FetchData />} />
         <Route path="/state-control" element={<StateControl />} />
         <Route path="/multi-language" element={<MultiLanguage />} />
+        <Route path="/chatting" element={<Chatting />} />
 
         {/* UI Sub-Routes */}
         <Route path="/ui">
