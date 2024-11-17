@@ -7,7 +7,6 @@ export default function Todo() {
       <div className="page-description">The list of things to do by priority</div>
       <Paper shadow="xs" radius="md" p="xl">
         <List type="ordered">
-          <List.Item>Zustant Store</List.Item>
           <List.Item>Register Page</List.Item>
           <List.Item>i18n Multi Language</List.Item>
           {/* <List.Item>Mantine UI 참조</List.Item> */}

@@ -14,6 +14,7 @@ import Responsive from '../samples/Responsive';
 import Todo from '../samples/Todo';
 import Typography from '../samples/Typography';
 import Login from './Auth/Login';
+import Register from './Auth/Register';
 import Layout from './Layouts/Layout';
 import NotFound from './NotFound';
 
@@ -23,6 +24,7 @@ export default function AppRoutes() {
       {/* Not Found Route */}
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
       {/* Layout Wrapper */}
       <Route element={<Layout />}>
