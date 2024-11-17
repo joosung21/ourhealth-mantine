@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
+import Accordion from '@/samples/Accordion';
 import Alert from '@/samples/Alert';
 import Card from '@/samples/Card';
 import DrageAndDrop from '@/samples/DrageAndDrop';
@@ -59,6 +60,7 @@ export default function AppRoutes() {
           <Route path="/ui/tooltip" element={<Tooltip />} />
           <Route path="/ui/card" element={<Card />} />
           <Route path="/ui/drag-and-drop" element={<DrageAndDrop />} />
+          <Route path="/ui/accordion" element={<Accordion />} />
         </Route>
       </Route>
     </Routes>

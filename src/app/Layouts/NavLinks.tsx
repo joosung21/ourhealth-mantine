@@ -94,6 +94,10 @@ const links = [
         href: '/ui/drag-and-drop',
         label: 'Drag and Drop',
       },
+      {
+        href: '/ui/accordion',
+        label: 'Accordion',
+      },
     ],
   },
 ];

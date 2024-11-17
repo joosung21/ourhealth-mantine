@@ -1,4 +1,5 @@
 import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd';
+import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
 import { Container, Grid, Paper, Text } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 
@@ -22,7 +23,11 @@ export default function DrageAndDrop() {
           {...provided.dragHandleProps}
           ref={provided.innerRef}
         >
-          <Text className="font-bold text-lg w-12">{item.symbol}</Text>
+          <div className="flex text-gray-400">
+            <EllipsisVerticalIcon className="w-5 -ml-2" />
+            <EllipsisVerticalIcon className="w-5 -ml-4 mr-4" />
+          </div>
+          <Text className="font-bold text-xl w-12">{item.symbol}</Text>
           <div>
             <Text>{item.name}</Text>
             <Text c="dimmed" size="sm">
