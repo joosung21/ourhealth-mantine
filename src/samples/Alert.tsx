@@ -11,19 +11,25 @@ export default function Alerts() {
       <Paper shadow="xs" radius="md" p="xl">
         <Stack>
           <Alert
-            color="blue"
+            variant="filled"
+            color="darkTeal"
             title="Default Alert"
             icon={<InformationCircleIcon className="w-5" />}
           >
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. At officiis, quae tempore
             necessitatibus placeat saepe.
           </Alert>
-          <Alert color="red" title="Warning Alert" icon={<InformationCircleIcon className="w-5" />}>
+          <Alert
+            variant="filled"
+            color="secondary.5"
+            title="Warning Alert"
+            icon={<InformationCircleIcon className="w-5" />}
+          >
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. At officiis, quae tempore
             necessitatibus placeat saepe.
           </Alert>
           <Alert
-            color="blue"
+            color="darkTeal"
             variant="outline"
             title="Outline Alert"
             icon={<InformationCircleIcon className="w-5" />}
@@ -32,7 +38,7 @@ export default function Alerts() {
             necessitatibus placeat saepe.
           </Alert>
           <Alert
-            color="red"
+            color="secondary"
             variant="outline"
             title="Outline Warning Alert"
             icon={<InformationCircleIcon className="w-5" />}
@@ -42,7 +48,7 @@ export default function Alerts() {
           </Alert>
           {showAlert && (
             <Alert
-              color="blue"
+              color="darkTeal"
               title="Alert with Close Button"
               icon={<InformationCircleIcon className="w-5" />}
               onClose={() => setShowAlert(false)}

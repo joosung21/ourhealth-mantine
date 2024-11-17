@@ -88,8 +88,6 @@ export default function Tooltips() {
                 <TextInput label="Name" placeholder="Name" size="xs" />
                 <TextInput label="Email" placeholder="john@doe.com" size="xs" mt="xs" />
                 <Button
-                  variant="outline"
-                  color="blue"
                   fullWidth
                   mt="md"
                   onClick={() => setPopoverOpened(false)} // Submit 클릭 시 닫기

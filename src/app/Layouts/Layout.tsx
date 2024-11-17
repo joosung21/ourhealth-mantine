@@ -40,7 +40,7 @@ export default function Layout() {
         </Group>
       </AppShell.Header>
 
-      <AppShell.Navbar>
+      <AppShell.Navbar className="overflow-y-auto pb-10">
         <LavLinks />
       </AppShell.Navbar>
 

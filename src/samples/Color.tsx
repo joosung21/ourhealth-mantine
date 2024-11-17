@@ -3,6 +3,7 @@ import { TAILWIND_COLORS } from './mocks/tainwindColors.js';
 
 const mantineColors = [
   'darkTeal',
+  'secondary',
   'gray',
   'red',
   'pink',

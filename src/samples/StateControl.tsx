@@ -56,7 +56,7 @@ export default function StateControl() {
               <Button onClick={decrease2}>Decrease</Button>
               <Button
                 onClick={() => usePersistedCounterStore.setState({ count: 0 })}
-                color="red"
+                color="gray"
                 style={{ marginLeft: 10 }}
               >
                 Reset
@@ -64,7 +64,7 @@ export default function StateControl() {
               {/* Refresh page */}
               <Button
                 onClick={() => window.location.reload()}
-                color="blue"
+                color="secondary.4"
                 style={{ marginLeft: 10 }}
               >
                 Refresh Page

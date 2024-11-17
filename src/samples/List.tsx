@@ -48,16 +48,16 @@ export default function List() {
         <Table.Td>{Intl.NumberFormat().format(totalReviews)}</Table.Td>
         <Table.Td>
           <Group justify="space-between">
-            <Text fz="xs" c="teal" fw={700}>
+            <Text fz="xs" c="darkTeal.5" fw={700}>
               {positiveReviews.toFixed(0)}%
             </Text>
-            <Text fz="xs" c="red" fw={700}>
+            <Text fz="xs" c="secondary.4" fw={700}>
               {negativeReviews.toFixed(0)}%
             </Text>
           </Group>
           <Progress.Root>
-            <Progress.Section value={positiveReviews} color="teal" />
-            <Progress.Section value={negativeReviews} color="red" />
+            <Progress.Section value={positiveReviews} color="darkTeal.5" />
+            <Progress.Section value={negativeReviews} color="secondary.3" />
           </Progress.Root>
         </Table.Td>
       </Table.Tr>

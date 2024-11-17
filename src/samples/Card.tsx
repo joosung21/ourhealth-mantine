@@ -45,7 +45,7 @@ export default function Cards() {
 
           <Group justify="space-between" mt="md" mb="xs">
             <Text fw={500}>Toronto General Hospital</Text>
-            <Badge color="pink">On</Badge>
+            <Badge color="secondary.4">On</Badge>
           </Group>
 
           <Text size="sm" c="dimmed">

@@ -28,7 +28,6 @@ export default function Notification() {
               })
             }
             variant="outline"
-            color="teal"
           >
             Success notification
           </Button>
@@ -46,6 +45,7 @@ export default function Notification() {
             Error notification
           </Button>
           <Button
+            color="secondary.5"
             onClick={() => {
               const id = notifications.show({
                 loading: true,
