@@ -1,12 +1,14 @@
 import { Outlet } from 'react-router-dom';
-import { AppShell, Burger, Group, Image } from '@mantine/core';
+import { AppShell, Burger, Group, Image, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import logo from '@/assets/logo.png';
+import { useCounterStore } from '@/stores/useCounterStore';
 import AvatarDropdown from './AvatarDropdown';
 import LavLinks from './NavLinks';
 import ScrollToTop from './ScrollToTop';
 
 export default function Layout() {
+  const count = useCounterStore((state) => state.count);
   const [opened, { toggle }] = useDisclosure();
 
   return (
@@ -28,6 +30,11 @@ export default function Layout() {
               className="cursor-pointer"
             />
           </Group>
+          {count !== 0 && (
+            <Text c="red" fw={700} size="xl">
+              Store: {count}
+            </Text>
+          )}
           <AvatarDropdown />
         </Group>
       </AppShell.Header>
