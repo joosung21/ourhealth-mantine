@@ -26,7 +26,10 @@ export default function ChatWindow({ messages }: ChatWindowProps) {
   }, [messages]);
 
   return (
-    <ScrollArea style={{ height: 'calc(100vh - 350px)' }} className="p-4" viewportRef={viewport}>
+    <ScrollArea
+      className="p-4 h-[calc(100dvh-300px)] md:h-[calc(100dvh-400px)]"
+      viewportRef={viewport}
+    >
       {messages.map((msg, index) => (
         <ChatMessage
           key={index}
