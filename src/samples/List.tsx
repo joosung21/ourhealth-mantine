@@ -20,7 +20,7 @@ import {
 } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import { notifications } from '@mantine/notifications';
-import { LIST, LIST2 } from './mocks/LIST';
+import { LIST, LIST2 } from './mocks/list';
 
 export default function List() {
   const { width } = useViewportSize();

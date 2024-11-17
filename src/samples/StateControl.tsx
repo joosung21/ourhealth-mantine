@@ -12,7 +12,8 @@ export default function StateControl() {
 
   return (
     <Container>
-      <h1 className="mb-6">State Control</h1>
+      <h1>State Control</h1>
+      <div className="page-description">State management using Zustand and local storage</div>
       <Paper shadow="xs" radius="md" p="xl">
         <Center>
           <div className="text-center">
