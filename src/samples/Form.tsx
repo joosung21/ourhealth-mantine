@@ -26,6 +26,7 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
+import DropzoneBox from '@/components/DropzoneBox/DropzoneBox';
 
 const selectData = [
   'USA',
@@ -209,6 +210,10 @@ export default function Form() {
                         Picked file: {file.name}
                       </Text>
                     )}
+                  </div>
+                  <div>
+                    <div className="label">Dropzone style Upload files</div>
+                    <DropzoneBox />
                   </div>
                 </Stack>
               </Fieldset>

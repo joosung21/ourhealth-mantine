@@ -914,6 +914,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/dropzone@npm:^7.14.1":
+  version: 7.14.1
+  resolution: "@mantine/dropzone@npm:7.14.1"
+  dependencies:
+    react-dropzone-esm: "npm:15.0.1"
+  peerDependencies:
+    "@mantine/core": 7.14.1
+    "@mantine/hooks": 7.14.1
+    react: ^18.x || ^19.x
+    react-dom: ^18.x || ^19.x
+  checksum: 10c0/303afdc4608a34679ca78ef4dfba51097e696d541cd1f39f0684bc387d91eced55434a74ada94d598277bd5e7b8e393c4a1515477bb41a02422f48e6e714b302
+  languageName: node
+  linkType: hard
+
 "@mantine/form@npm:^7.14.0":
   version: 7.14.0
   resolution: "@mantine/form@npm:7.14.0"
@@ -4628,6 +4642,7 @@ __metadata:
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.3.1"
     "@mantine/core": "npm:7.13.5"
     "@mantine/dates": "npm:^7.14.0"
+    "@mantine/dropzone": "npm:^7.14.1"
     "@mantine/form": "npm:^7.14.0"
     "@mantine/hooks": "npm:7.13.5"
     "@mantine/modals": "npm:^7.14.0"
@@ -5517,6 +5532,17 @@ __metadata:
   peerDependencies:
     react: ^18.3.1
   checksum: 10c0/a752496c1941f958f2e8ac56239172296fcddce1365ce45222d04a1947e0cc5547df3e8447f855a81d6d39f008d7c32eab43db3712077f09e3f67c4874973e85
+  languageName: node
+  linkType: hard
+
+"react-dropzone-esm@npm:15.0.1":
+  version: 15.0.1
+  resolution: "react-dropzone-esm@npm:15.0.1"
+  dependencies:
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    react: ">= 16.8 || 18.0.0"
+  checksum: 10c0/4bd7054a78a9d8b98d13f0abfbdec334e647c681ccb62c5c38fce72e1bace4cdb7d5eb22675ab2ce63f6cca11ec40c0e2081a28a725a38f331cf930abb170e7d
   languageName: node
   linkType: hard
 
