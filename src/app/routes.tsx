@@ -5,6 +5,7 @@ import FetchData from '@/samples/FetchData';
 import List from '@/samples/List';
 import MultiLanguage from '@/samples/MultiLanguage';
 import StateControl from '@/samples/StateControl';
+import Tooltip from '@/samples/Tooltip';
 import AppSpec from '../samples/AppSpec';
 import Color from '../samples/Color';
 import DatePicker from '../samples/DatePicker';
@@ -53,6 +54,7 @@ export default function AppRoutes() {
           <Route path="/ui/alert" element={<Alert />} />
           <Route path="/ui/drawer" element={<Drawers />} />
           <Route path="/ui/list" element={<List />} />
+          <Route path="/ui/tooltip" element={<Tooltip />} />
         </Route>
       </Route>
     </Routes>

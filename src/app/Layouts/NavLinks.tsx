@@ -82,6 +82,10 @@ const links = [
         href: '/ui/list',
         label: 'List',
       },
+      {
+        href: '/ui/tooltip',
+        label: 'Tooltip & Popover',
+      },
     ],
   },
 ];
