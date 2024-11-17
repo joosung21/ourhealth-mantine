@@ -86,6 +86,10 @@ const links = [
         href: '/ui/tooltip',
         label: 'Tooltip & Popover',
       },
+      {
+        href: '/ui/card',
+        label: 'Card',
+      },
     ],
   },
 ];
