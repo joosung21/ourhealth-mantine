@@ -90,6 +90,10 @@ const links = [
         href: '/ui/card',
         label: 'Card',
       },
+      {
+        href: '/ui/drag-and-drop',
+        label: 'Drag and Drop',
+      },
     ],
   },
 ];

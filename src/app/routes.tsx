@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Alert from '@/samples/Alert';
 import Card from '@/samples/Card';
+import DrageAndDrop from '@/samples/DrageAndDrop';
 import Drawers from '@/samples/Drawer';
 import FetchData from '@/samples/FetchData';
 import List from '@/samples/List';
@@ -57,6 +58,7 @@ export default function AppRoutes() {
           <Route path="/ui/list" element={<List />} />
           <Route path="/ui/tooltip" element={<Tooltip />} />
           <Route path="/ui/card" element={<Card />} />
+          <Route path="/ui/drag-and-drop" element={<DrageAndDrop />} />
         </Route>
       </Route>
     </Routes>
