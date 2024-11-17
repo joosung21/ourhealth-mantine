@@ -1,10 +1,13 @@
 import {
+  Anchor,
+  Avatar,
   Badge,
   Button,
   Card,
   Container,
   Group,
   Image,
+  Paper,
   RingProgress,
   Text,
   useMantineTheme,
@@ -102,6 +105,32 @@ export default function Cards() {
             </div>
           </div>
         </Card>
+
+        <Paper withBorder radius="md" className="px-8 py-6">
+          <Group>
+            <Avatar
+              src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png"
+              alt="Jacob Warnhalter"
+              radius="xl"
+            />
+            <div>
+              <Text fz="sm">Jacob Warnhalter</Text>
+              <Text fz="xs" c="dimmed">
+                10 minutes ago
+              </Text>
+            </div>
+          </Group>
+          <div className="mt-4">
+            <p>
+              <Anchor href="https://www.uhn.ca/" rel="noopener noreferrer" target="_blank">
+                Toronto General Hospital
+              </Anchor>{' '}
+              is a major teaching hospital in downtown Toronto, Ontario, Canada, and a part of the
+              University Health Network.
+            </p>
+            <p></p>
+          </div>
+        </Paper>
       </Group>
     </Container>
   );
