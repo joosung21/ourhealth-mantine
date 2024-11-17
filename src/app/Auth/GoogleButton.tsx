@@ -30,5 +30,14 @@ function GoogleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export function GoogleButton(props: ButtonProps & React.ComponentPropsWithoutRef<'button'>) {
-  return <Button leftSection={<GoogleIcon />} variant="default" {...props} fullWidth h={40} />;
+  return (
+    <Button
+      leftSection={<GoogleIcon />}
+      variant="default"
+      {...props}
+      fullWidth
+      h={40}
+      onClick={() => (window.location.href = '/todo')}
+    />
+  );
 }
