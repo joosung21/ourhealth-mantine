@@ -7,6 +7,10 @@
 @import '@mantine/dates/styles.css';
 @import '@mantine/notifications/styles.css';
 
+/* Flag Icons */
+/* https://flagicons.lipis.dev/ */
+@import url('https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css');
+
 /* @tailwind; */
 @tailwind components;
 @tailwind utilities;

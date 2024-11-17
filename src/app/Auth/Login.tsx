@@ -24,7 +24,10 @@ export default function Login() {
 
         <TextInput label="Email address" placeholder="hello@gmail.com" size="md" />
         <PasswordInput label="Password" placeholder="Your password" mt="md" size="md" />
-        <Checkbox label="Keep me logged in" mt="xl" size="md" />
+        <Anchor href="/forgot-password" pt={2} fw={500} fz="xs">
+          Forgot your password?
+        </Anchor>
+        <Checkbox label="Keep me logged in" mt="md" size="md" />
 
         <Button fullWidth mt="xl" size="md" onClick={() => (window.location.href = '/')}>
           Login

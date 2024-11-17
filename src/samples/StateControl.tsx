@@ -1,4 +1,4 @@
-import { Button, Center, Container, Paper, Text } from '@mantine/core';
+import { Button, Center, Container, Group, Paper, Text } from '@mantine/core';
 import { useCounterStore, usePersistedCounterStore } from '@/stores/useCounterStore';
 
 export default function StateControl() {
@@ -27,11 +27,12 @@ export default function StateControl() {
             <Text size="xl" fw={700} style={{ display: 'block', marginBottom: 20 }}>
               {count}
             </Text>
-
-            <Button onClick={increase} style={{ marginRight: 10 }}>
-              Increase
-            </Button>
-            <Button onClick={decrease}>Decrease</Button>
+            <Group gap="xs" justify="center">
+              <Button onClick={increase} style={{ marginRight: 10 }}>
+                Increase
+              </Button>
+              <Button onClick={decrease}>Decrease</Button>
+            </Group>
           </div>
         </Center>
 
@@ -48,25 +49,27 @@ export default function StateControl() {
               {count2}
             </Text>
 
-            <Button onClick={increase2} style={{ marginRight: 10 }}>
-              Increase
-            </Button>
-            <Button onClick={decrease2}>Decrease</Button>
-            <Button
-              onClick={() => usePersistedCounterStore.setState({ count: 0 })}
-              color="red"
-              style={{ marginLeft: 10 }}
-            >
-              Reset
-            </Button>
-            {/* Refresh page */}
-            <Button
-              onClick={() => window.location.reload()}
-              color="blue"
-              style={{ marginLeft: 10 }}
-            >
-              Refresh Page
-            </Button>
+            <Group gap="xs" justify="center">
+              <Button onClick={increase2} style={{ marginRight: 10 }}>
+                Increase
+              </Button>
+              <Button onClick={decrease2}>Decrease</Button>
+              <Button
+                onClick={() => usePersistedCounterStore.setState({ count: 0 })}
+                color="red"
+                style={{ marginLeft: 10 }}
+              >
+                Reset
+              </Button>
+              {/* Refresh page */}
+              <Button
+                onClick={() => window.location.reload()}
+                color="blue"
+                style={{ marginLeft: 10 }}
+              >
+                Refresh Page
+              </Button>
+            </Group>
           </div>
         </Center>
       </Paper>

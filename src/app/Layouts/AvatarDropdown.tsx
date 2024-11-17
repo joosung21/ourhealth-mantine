@@ -1,5 +1,5 @@
-import { Cog8ToothIcon, PowerIcon } from '@heroicons/react/24/outline';
-import { Avatar, Combobox, Group, Menu, useCombobox } from '@mantine/core';
+import { ArrowRightStartOnRectangleIcon, Cog8ToothIcon } from '@heroicons/react/24/outline';
+import { Avatar, Group, Menu, useCombobox } from '@mantine/core';
 
 export default function AvatarDropdown() {
   const name = 'Joosung Ahn';
@@ -23,7 +23,7 @@ export default function AvatarDropdown() {
         <Menu.Divider />
 
         <Menu.Item
-          leftSection={<PowerIcon className="w-4" id="logout" />}
+          leftSection={<ArrowRightStartOnRectangleIcon className="w-4" id="logout" />}
           onClick={() => {
             window.location.href = '/login';
           }}

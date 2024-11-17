@@ -14,6 +14,7 @@ import Notification from '../samples/Notification';
 import Responsive from '../samples/Responsive';
 import Todo from '../samples/Todo';
 import Typography from '../samples/Typography';
+import ForgotPassword from './Auth/ForgotPassword';
 import Login from './Auth/Login';
 import Register from './Auth/Register';
 import Layout from './Layouts/Layout';
@@ -26,6 +27,7 @@ export default function AppRoutes() {
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
 
       {/* Layout Wrapper */}
       <Route element={<Layout />}>
