@@ -3,6 +3,7 @@ import Alert from '@/samples/Alert';
 import Drawers from '@/samples/Drawer';
 import FetchData from '@/samples/FetchData';
 import List from '@/samples/List';
+import StateControl from '@/samples/StateControl';
 import AppSpec from '../samples/AppSpec';
 import Color from '../samples/Color';
 import DatePicker from '../samples/DatePicker';
@@ -33,6 +34,7 @@ export default function AppRoutes() {
         <Route path="/app-spec" element={<AppSpec />} />
         <Route path="/responsive" element={<Responsive />} />
         <Route path="/fetch-data" element={<FetchData />} />
+        <Route path="/state-control" element={<StateControl />} />
 
         {/* UI Sub-Routes */}
         <Route path="/ui">

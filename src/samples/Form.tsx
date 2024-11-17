@@ -66,7 +66,8 @@ export default function Form() {
 
   return (
     <Container>
-      <h1 className="mb-6">Form</h1>
+      <h1>Form</h1>
+      <div className="page-description">Form elements with validation</div>
       <Paper shadow="xs" radius="md" p="xl" className="relative">
         <LoadingOverlay visible={visible} />
 

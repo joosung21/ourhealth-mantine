@@ -3,7 +3,8 @@ import { Container, Paper, Text } from '@mantine/core';
 export default function Typography() {
   return (
     <Container>
-      <h1 className="mb-6">Typography</h1>
+      <h1>Typography</h1>
+      <div className="page-description">Typography styles and text alignment</div>
       <Paper shadow="xs" radius="md" p="xl">
         <h1>Header 1</h1>
         <h2>Header 2</h2>

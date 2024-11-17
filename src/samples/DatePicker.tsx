@@ -19,7 +19,10 @@ export default function DatePicker() {
 
   return (
     <Container>
-      <h1 className="mb-6">DatePicker</h1>
+      <h1>DatePicker</h1>
+      <div className="page-description">
+        Date and time pickers with different modes and settings
+      </div>
       <Paper shadow="xs" radius="md" p="xl">
         <Grid gutter="lg">
           <Grid.Col span={{ base: 12, md: 6 }}>

@@ -20,9 +20,12 @@ import {
   Text,
   TextInput,
 } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import { LIST, LIST2 } from './mocks/LIST';
 
 export default function List() {
+  const { width } = useViewportSize();
+
   // List1
   const rows = LIST.map((row: any) => {
     const totalReviews = row.reviews.negative + row.reviews.positive;
@@ -140,7 +143,7 @@ export default function List() {
         </Table.ScrollContainer>
 
         <Center mt="xl">
-          <Pagination total={10} />
+          <Pagination total={60} withControls={width > 768} />
         </Center>
       </Paper>
 
