@@ -62,6 +62,14 @@ const links = [
         href: '/ui/alert',
         label: 'Alert',
       },
+      {
+        href: '/ui/drawer',
+        label: 'Drawer',
+      },
+      {
+        href: '/ui/list',
+        label: 'List',
+      },
     ],
   },
 ];

@@ -1,4 +1,4 @@
-const TAILWIND_COLORS = [
+export const TAILWIND_COLORS = [
   [
     'bg-slate-50',
     'bg-slate-100',
@@ -286,5 +286,3 @@ const TAILWIND_COLORS = [
     'bg-rose-950',
   ],
 ];
-
-export default TAILWIND_COLORS;

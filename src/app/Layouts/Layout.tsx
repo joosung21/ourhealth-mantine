@@ -36,7 +36,7 @@ export default function Layout() {
         <LavLinks />
       </AppShell.Navbar>
 
-      <AppShell.Main className="bg-slate-50 max-sm:px-0">
+      <AppShell.Main className="bg-slate-50 max-sm:px-0 pb-10">
         <Outlet />
         <ScrollToTop />
       </AppShell.Main>

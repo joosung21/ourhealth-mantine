@@ -1,5 +1,5 @@
 import { ArrowUpIcon } from '@heroicons/react/24/outline';
-import { Affix, Button, rem, Text, Transition } from '@mantine/core';
+import { Affix, Button, Transition } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
 
 export default function ScrollToTop() {
@@ -7,8 +7,7 @@ export default function ScrollToTop() {
 
   return (
     <>
-      <Text ta="center">Affix is located at the bottom of the screen, scroll to see it</Text>
-      <Affix position={{ bottom: 20, right: 20 }}>
+      <Affix position={{ bottom: 20, right: 20 }} className="max-sm:hidden">
         <Transition transition="slide-up" mounted={scroll.y > 0}>
           {(transitionStyles) => (
             <Button

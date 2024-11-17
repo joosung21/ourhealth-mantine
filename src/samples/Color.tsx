@@ -1,5 +1,5 @@
 import { Box, Button, Card, Container, Divider, Group, Paper } from '@mantine/core';
-import TAILWIND_COLORS from './constants/tainwind-colors.js';
+import { TAILWIND_COLORS } from './mocks/tainwindColors.js';
 
 const mantineColors = [
   'gray',

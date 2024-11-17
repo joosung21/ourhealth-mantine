@@ -1,6 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Alert from '@/samples/Alert';
+import Drawers from '@/samples/Drawer';
 import FetchData from '@/samples/FetchData';
+import List from '@/samples/List';
 import AppSpec from '../samples/AppSpec';
 import Color from '../samples/Color';
 import DatePicker from '../samples/DatePicker';
@@ -10,9 +12,9 @@ import Notification from '../samples/Notification';
 import Responsive from '../samples/Responsive';
 import Todo from '../samples/Todo';
 import Typography from '../samples/Typography';
+import Login from './Auth/Login';
 import Layout from './Layouts/Layout';
 import NotFound from './NotFound';
-import Login from './Auth/Login';
 
 export default function AppRoutes() {
   return (
@@ -41,6 +43,8 @@ export default function AppRoutes() {
           <Route path="/ui/notification" element={<Notification />} />
           <Route path="/ui/modal" element={<Modal />} />
           <Route path="/ui/alert" element={<Alert />} />
+          <Route path="/ui/drawer" element={<Drawers />} />
+          <Route path="/ui/list" element={<List />} />
         </Route>
       </Route>
     </Routes>
