@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { AppShell, Burger, Group, Image, Text, useMantineTheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo.svg';
 import { useCounterStore } from '@/stores/useCounterStore';
 import AvatarDropdown from './AvatarDropdown';
 import LavLinks from './NavLinks';

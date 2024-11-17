@@ -9,7 +9,7 @@ import {
   Text,
   TextInput,
 } from '@mantine/core';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo.svg';
 import { GoogleButton } from './GoogleButton';
 import classes from './Login.module.css';
 
