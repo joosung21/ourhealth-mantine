@@ -37,7 +37,7 @@ export default function AppRoutes() {
       {/* Layout Wrapper */}
       <Route element={<Layout />}>
         {/* Redirect */}
-        <Route path="/" element={<Navigate to="/todo" replace />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
         {/* Main Routes */}
         <Route path="/todo" element={<Todo />} />
